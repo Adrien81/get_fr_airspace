@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# usage: ./get_fr_airspace.sh
+
 mv -f *AIRSPACE*.txt prev/.
 
 rm /tmp/tmp1.txt /tmp/tmp2.txt
