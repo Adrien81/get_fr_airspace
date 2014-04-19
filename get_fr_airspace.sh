@@ -8,7 +8,12 @@ python get_url.py > /tmp/tmp1.txt
 
 awk 'NR==1' /tmp/tmp1.txt > /tmp/tmp2.txt
 
-cd prev
+if [ -d prev ]; then
+    cd prev
+else
+    mkdir prev
+    cd prev
+fi
 wget -i /tmp/tmp2.txt
 
 echo " "
