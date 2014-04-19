@@ -16,3 +16,10 @@ echo "Most recent file is:"
 ls -tr | tail -1
 
 cd ..
+
+rm latest_france_airspace.txt
+rm /tmp/ASFILENAME.txt
+echo -n "ASFILENAME=" >> /tmp/ASFILENAME.txt
+ls -tr prev/* | tail -1 >> /tmp/ASFILENAME.txt
+source /tmp/ASFILENAME.txt
+ln -s $ASFILENAME latest_france_airspace.txt
